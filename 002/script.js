@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   let formulario = document.getElementById("f");
   formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-
     let nome = document.getElementById("nome");
     let tipo = document.getElementsByName("tipo");
     let cpf_cnpj = document.getElementById("cpf_cnpj");
@@ -11,27 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
     nomeError.textContent = "";
     if (nome.value.length < 3) {
       nomeError.textContent = "O nome não pode estar vazio.";
+      e.preventDefault();
     }
 
     let tipoError = document.getElementById("tipoError");
 
-    let cpf_cnpjError = document.getElementById("cpj_cnpjError");
+    let cpf_cnpjError = document.getElementById("cpf_cnpjError");
+    cpf_cnpjError.textContent = "";
+    tipoError.textContent = "";
 
     if (tipo[0].checked) {
-      let status = valida_cpf(cpf_cnpj);
+      let status = valida_cpf(cpf_cnpj.value);
       if (!status) {
-        cpf_cnpjError.textContent = "";
+        cpf_cnpjError.textContent = "Você precisa inserir um CPF válido.";
+        e.preventDefault();
       }
+      return true;
     } else if (tipo[1].checked) {
-      let status = valida_cnpj(cpf_cnpj);
+      let status = valida_cnpj(cpf_cnpj.value);
       if (!status) {
-        cpf_cnpjError.textContent = "";
+        cpf_cnpjError.textContent = "Você precisa inserir um CNPJ válido.";
+        e.preventDefault();
       }
     } else {
-        tipoError.textContent = "Selecione um tipo de pessoa."
+      tipoError.textContent = "Selecione um tipo de pessoa.";
+      e.preventDefault();
     }
-
-    
   });
 });
 

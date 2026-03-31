@@ -2,6 +2,96 @@
 
 require_once 'connection.php';
 
+function valida_cpf($cpf)
+{
+    $cpf = preg_replace('/\D/', '', $cpf);
+
+    if (strlen($cpf) < 11) return false;
+
+    $digitos_iguais = true;
+    for ($i = 0; $i < strlen($cpf) - 1; $i++) {
+        if ($cpf[$i] != $cpf[$i + 1]) {
+            $digitos_iguais = false;
+            break;
+        }
+    }
+
+    if (!$digitos_iguais) {
+        $numeros = substr($cpf, 0, 9);
+        $digitos = substr($cpf, 9);
+        $soma = 0;
+
+        for ($i = 10; $i > 1; $i--) {
+            $soma += $numeros[10 - $i] * $i;
+        }
+
+        $resultado = ($soma % 11 < 2) ? 0 : 11 - ($soma % 11);
+        if ($resultado != $digitos[0]) return false;
+
+        $numeros = substr($cpf, 0, 10);
+        $soma = 0;
+
+        for ($i = 11; $i > 1; $i--) {
+            $soma += $numeros[11 - $i] * $i;
+        }
+
+        $resultado = ($soma % 11 < 2) ? 0 : 11 - ($soma % 11);
+        if ($resultado != $digitos[1]) return false;
+
+        return true;
+    }
+
+    return false;
+}
+
+function valida_cnpj($cnpj)
+{
+    $cnpj = preg_replace('/\D/', '', $cnpj);
+
+    if (strlen($cnpj) < 14) return false;
+
+    $digitos_iguais = true;
+    for ($i = 0; $i < strlen($cnpj) - 1; $i++) {
+        if ($cnpj[$i] != $cnpj[$i + 1]) {
+            $digitos_iguais = false;
+            break;
+        }
+    }
+
+    if (!$digitos_iguais) {
+        $tamanho = strlen($cnpj) - 2;
+        $numeros = substr($cnpj, 0, $tamanho);
+        $digitos = substr($cnpj, $tamanho);
+        $soma = 0;
+        $pos = $tamanho - 7;
+
+        for ($i = $tamanho; $i >= 1; $i--) {
+            $soma += $numeros[$tamanho - $i] * $pos--;
+            if ($pos < 2) $pos = 9;
+        }
+
+        $resultado = ($soma % 11 < 2) ? 0 : 11 - ($soma % 11);
+        if ($resultado != $digitos[0]) return false;
+
+        $tamanho++;
+        $numeros = substr($cnpj, 0, $tamanho);
+        $soma = 0;
+        $pos = $tamanho - 7;
+
+        for ($i = $tamanho; $i >= 1; $i--) {
+            $soma += $numeros[$tamanho - $i] * $pos--;
+            if ($pos < 2) $pos = 9;
+        }
+
+        $resultado = ($soma % 11 < 2) ? 0 : 11 - ($soma % 11);
+        if ($resultado != $digitos[1]) return false;
+
+        return true;
+    }
+
+    return false;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nome = $_POST['nome'] ?? '';

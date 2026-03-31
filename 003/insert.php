@@ -44,8 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: index.php?success=Dados inseridos com sucesso!");
         exit();
     } catch (PDOException $e) {
-        echo "Erro: " . $e->getMessage();
-        // header("Location: index.php?error=Tente novamente.");
-        // exit();
+        header("Location: index.php?error=Tente novamente.");
+        exit();
     }
 }

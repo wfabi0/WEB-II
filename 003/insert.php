@@ -9,8 +9,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cpf_cnpj = $_POST['cpf_cnpj'] ?? '';
 
     try {
-        if (empty($nome) || empty($tipo) || empty($cpf_cnpj)) {
-            die("Por favor, preencha todos os campos.");
+        if (
+            empty($nome) || empty($tipo) ||
+            (
+                strtolower($tipo) !== "fisica" && strtolower($tipo) !== "juridica"
+            )
+            || empty($cpf_cnpj)
+        ) {
+            header("Location: index.php?error=Por+favor,+preencha+todos+os+campos.");
+            exit();
+        }
+
+        switch (strtolower($tipo)) {
+            case "fisica": {
+                    $tipo = "F";
+                    break;
+                }
+            case "juridica": {
+                    $tipo = "J";
+                    break;
+                }
         }
 
         $conn = new Connection("localhost", "exercicio", "root", "root");
@@ -23,9 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':cpf_cnpj', $cpf_cnpj);
         $stmt->execute();
 
-        header("Location: index.php");
+        header("Location: index.php?success=Dados inseridos com sucesso!");
         exit();
     } catch (PDOException $e) {
-        die("Erro ao inserir dados: " . $e->getMessage());
+        echo "Erro: " . $e->getMessage();
+        // header("Location: index.php?error=Tente novamente.");
+        // exit();
     }
 }

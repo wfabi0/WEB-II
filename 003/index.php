@@ -83,6 +83,14 @@
 
 		<br />
 
+		<?php if (isset($_GET['error'])): ?>
+			<p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
+		<?php endif; ?>
+
+		<?php if (isset($_GET['success'])): ?>
+			<p style="color: green;"><?php echo htmlspecialchars($_GET['success']); ?></p>
+		<?php endif; ?>
+
 	</form>
 
 	<!-- NOVA TABELA -->

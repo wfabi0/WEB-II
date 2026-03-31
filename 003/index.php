@@ -30,40 +30,48 @@
 		}
 	</style>
 
+	<script src="script.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
 	<?php
 
-	require_once 'conexao.php';
+	require_once 'connection.php';
 
-	$conn = new Connection("localhost", "atividade_03", "root", "root");
+	$conn = new Connection("localhost", "exercicio", "root", "root");
 	$pdoConn = $conn->getConnection();
 
 	?>
 
 	<h1>Exercício de Integração (frontend, backend e banco de dados)</h1>
 
-	<form id="f" method="post" action="https://postman-echo.com/post">
+	<form id="f" method="post" action="insert.php">
 
 		<label for="nome"> Nome: </label>
 		<input type="text" id="nome" name="nome" size="40" maxlength="40" />
+		<div><b class="error" id="nomeError"></b></div>
 
 		<br />
 
 		Tipo de Pessoa:
 
 		<input type="radio" id="pfisica" name="tipo" value="fisica" />
-		<label for="pfisica"> Física </label>
+		<label for="pfisica"> Fisica </label>
 
 		<input type="radio" id="pjuridica" name="tipo" value="juridica" />
 		<label for="pjuridica"> Jurídica </label>
+
+		<div><b class="error" id="tipoError"></b></div>
 
 		<br />
 
 		<label for="cpf_cnpj"> CPF/CNPJ: </label>
 		<input type="text" id="cpf_cnpj" name="cpf_cnpj" />
+		<div><b class="error" id="cpf_cnpjError"></b></div>
 
 		<br />
 

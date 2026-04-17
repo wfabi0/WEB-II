@@ -6,6 +6,21 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        return view('home/index');
+    }
+
+    public function blog(): string
+    {
+        return "Quem responde é o Home::blog";
+    }
+
+    public function sobre(): string
+    {
+        return "Quem responde é Home::sobre";
+    }
+
+    public function ajuda(): string
+    {
+        return "Quem responde é Home::ajuda";
     }
 }

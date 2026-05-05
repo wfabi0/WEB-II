@@ -1,0 +1,1 @@
+<img class= "img-workflow" src="<?= base_url('img/workflow.png') ?>" alt="Imagem de exemplo" />

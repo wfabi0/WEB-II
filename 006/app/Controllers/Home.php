@@ -9,13 +9,14 @@ class Home extends BaseController
 
     public function initController($request, $response, $logger)
     {
-        
+
         parent::initController($request, $response, $logger);
 
         $this->dadosCabecalho = [
             "titulo" => 'Blog Teste'
         ];
 
+        helper("html");
     }
 
     public function index(): string
@@ -25,16 +26,16 @@ class Home extends BaseController
 
     public function home(): string
     {
-        return view('header', $this->dadosCabecalho). 
-               view('home_content').
-               view('footer');
+        return view('header', $this->dadosCabecalho) .
+            view('home_content') .
+            view('footer');
     }
 
     public function quemSomos(): string
     {
 
-        $this->dadosCabecalho['titulo'] = $this->dadosCabecalho['titulo'] . 
-                                          " | Quem Somos";
+        $this->dadosCabecalho['titulo'] = $this->dadosCabecalho['titulo'] .
+            " | Quem Somos";
 
 
         $dadosConteudo = [
@@ -48,22 +49,22 @@ class Home extends BaseController
             ]
         ];
 
-        return view('header', $this->dadosCabecalho). 
-               view('quem_somos_content', $dadosConteudo).
-               view('footer');
+        return view('header', $this->dadosCabecalho) .
+            view('quem_somos_content', $dadosConteudo, ['cache' => 60, 'cache_name' => 'quem_somos_content_cache']) .
+            view('footer');
     }
 
     public function noticias(): string
     {
-        return view('header', $this->dadosCabecalho). 
-               view('noticias_content').
-               view('footer');
+        return view('header', $this->dadosCabecalho) .
+            view('noticias_content') .
+            view('footer');
     }
 
     public function faleConosco(): string
     {
-        return view('header', $this->dadosCabecalho). 
-               view('fale_conosco_content').
-               view('footer');
+        return view('header', $this->dadosCabecalho) .
+            view('fale_conosco_content') .
+            view('footer');
     }
 }

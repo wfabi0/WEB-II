@@ -1,0 +1,13 @@
+CRITICAL - 2026-05-08 13:34:38 --> ErrorException: Undefined variable $renderer
+[Method: GET, Route: quem-somos]
+in APPPATH\Views\quem-somos.php on line 21.
+ 1 APPPATH\Views\quem-somos.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $renderer', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\007\\app\\Views\\quem-somos.php', 21)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\007\\app\\Views\\quem-somos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 APPPATH\Controllers\Home.php(29): CodeIgniter\View\View->render('quem-somos')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->quemSomos()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

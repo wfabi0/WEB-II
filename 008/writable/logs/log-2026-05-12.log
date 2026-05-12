@@ -348,3 +348,60 @@ in SYSTEMPATH\Database\BaseConnection.php on line 465.
  5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-12 17:03:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'roo', 'model_test', 3306, '', 0)
+#1 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Usuários\0077110\Documents\dev\WEB-II\008\app\Controllers\Home.php(12): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#4 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 E:\Usuários\0077110\Documents\dev\WEB-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Usuários\0077110\Documents\dev\WEB-II\008\app\Controllers\Home.php(12): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#3 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#6 E:\Usuários\0077110\Documents\dev\WEB-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 E:\Usuários\0077110\Documents\dev\WEB-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+CRITICAL - 2026-05-12 17:34:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "....php"
+[Method: GET, Route: alunos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('....php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('...', [], true)
+ 3 APPPATH\Controllers\Home.php(33): view('...', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->alunos()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-12 17:37:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "....php"
+[Method: GET, Route: alunos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('....php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('...', [], true)
+ 3 APPPATH\Controllers\Home.php(37): view('...', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->alunos()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-12 17:37:13 --> TypeError: App\Controllers\Home::alunos(): Return value must be of type string, none returned
+[Method: GET, Route: alunos]
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->alunos()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

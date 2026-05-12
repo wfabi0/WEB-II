@@ -6,15 +6,33 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        $db = db_connect();
+        try {
+            $db = db_connect();
 
-        $db->initialize();
+            $db->initialize();
 
-        if ($db->connID) {
-            echo "Conexão OK";
-        } else {
-            echo "Conexão FALHA";
+            if ($db->connID) {
+                echo "Conexão OK";
+            }
+        } catch (\Throwable $e) {
+            echo "Erro de conexão: " . $e->getMessage();
         }
+
+        return '';
+    }
+
+    public function alunos(): string {
+        $userModel = model('UserModel');
+
+        $users = $userModel->findAll();
+
+        $dados = [
+            'alunos', $users
+        ];
+
+        echo "<pre>";
+        var_dump($dados);
+        echo "</pre>";
 
         return '';
     }

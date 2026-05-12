@@ -6,6 +6,16 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        $db = db_connect();
+
+        $db->initialize();
+
+        if ($db->connID) {
+            echo "Conexão OK";
+        } else {
+            echo "Conexão FALHA";
+        }
+
+        return '';
     }
 }

@@ -21,19 +21,16 @@ class Home extends BaseController
         return '';
     }
 
-    public function alunos(): string {
+    public function alunos(): string
+    {
         $userModel = model('UserModel');
 
         $users = $userModel->findAll();
 
         $dados = [
-            'alunos', $users
+            'alunos' => $users
         ];
 
-        echo "<pre>";
-        var_dump($dados);
-        echo "</pre>";
-
-        return '';
+        return view('alunos', $dados);
     }
 }

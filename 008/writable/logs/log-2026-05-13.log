@@ -1,0 +1,27 @@
+CRITICAL - 2026-05-13 13:41:43 --> ErrorException: Undefined variable $notas
+[Method: GET, Route: alunos]
+in APPPATH\Views\alunos.php on line 20.
+ 1 APPPATH\Views\alunos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $notas', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\008\\app\\Views\\alunos.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\008\\app\\Views\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('alunos', [], true)
+ 5 APPPATH\Controllers\Home.php(34): view('alunos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->alunos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 13:42:35 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: alunos]
+in APPPATH\Views\alunos.php on line 22.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('alunos', [], true)
+ 4 APPPATH\Controllers\Home.php(34): view('alunos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->alunos()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -8,8 +8,13 @@ namespace App\Controllers;
      - doLogin: Processa o login do usuário.
 
 */
+
 class Auth extends BaseController
 {
+
+    private $email = 'admin@exemplo.com';
+    private $password = 'admin';
+
     /**
      * Método para exibir a página de login.
      * 
@@ -30,10 +35,11 @@ class Auth extends BaseController
      * 
      * Após o logout, o usuário é redirecionado para a página de login.
      */
-    public function logout() : string
+    public function logout()
     {
-        //Implementar processo de logout aqui
-        return 'Auth/logout - Impleemntar ainda...';
+        $session = session();
+        $session->destroy();
+        return redirect()->to("/login");
     }
 
     /**
@@ -60,9 +66,24 @@ class Auth extends BaseController
      * login, usando flashdata para exibir a mensagem de erro na tela do 
      * formulário de login.
      */
-    public function doLogin() : string
+    public function doLogin()
     {
-        //Implementar processo de login aqui
-        return "Auth/doLogin - Implementar ainda...";
+        $email = $this->request->getPost("email");
+        $password = $this->request->getPost("password");
+
+        if ($email !== $this->email || $password !== $this->password) {
+            return redirect()->to('/login')->with('error', 'Email ou senha inválido.');
+        }
+
+        $session = session();
+
+        $data = [
+            "email" => $email,
+            "logged_in" => true
+        ];
+
+        $session->set($data);
+
+        return redirect()->to('/admin');
     }
 }

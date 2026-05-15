@@ -15,6 +15,6 @@ class Home extends BaseController
      */
     public function index(): string
     {
-        return 'home/index - Implementar ainda...';
+        return view('home/index');
     }
 }

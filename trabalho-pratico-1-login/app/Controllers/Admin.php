@@ -19,8 +19,17 @@ class Admin extends BaseController
         redirecionar para a página de login.
     */
 
-    public function index(): string
+    public function index()
     {
-        return 'Admin/index - Implementar ainda...';
+
+        $session = session();
+
+        $status = $session->get('logged_in');
+
+        if (!$status) {
+            return redirect()->to("/login");
+        } 
+
+        return view('admin/index');
     }
 }

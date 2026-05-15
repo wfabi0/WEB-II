@@ -20,8 +20,15 @@ class Auth extends BaseController
      * 
      * Este método retorna a view 'auth/login', que contém o formulário de login para os usuários.
      */
-    public function login(): string
+    public function login()
     {
+        $session = session();
+
+        $status = $session->get('logged_in');
+        if ($status) {
+            return redirect()->to('/admin');
+        }
+
         return view('auth/login');
     }
 

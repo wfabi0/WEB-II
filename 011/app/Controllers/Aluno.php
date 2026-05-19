@@ -5,12 +5,14 @@ namespace App\Controllers;
 class Aluno extends BaseController
 {
 
-    // public function create($nome_alu, $nota_alu, $cpf_alu)
-    // {
-    //     $alunoService = service("alunos");
-    //     $res = $alunoService->create($nome_alu, $nota_alu, $cpf_alu);
-    //     return $this->response->setJSON($res);
-    // }
+    public function create()
+    {
+        $body = $this->request->getJSON();
+
+        $alunoService = service("alunos");
+        $res = $alunoService->create($body->nome_alu, $body->nota_alu, $body->cpf_alu);
+        return $this->response->setJSON($res);
+    }
 
     public function getById($alunoId = null) {
         $alunoService = service("alunos");

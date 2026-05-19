@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-// $routes->post('/alunos', 'Aluno::create');
+$routes->post('/alunos', 'Aluno::create');
 // $routes->put('/alunos', 'Aluno::update'); 
 $routes->get('/alunos', 'Aluno::getAll');
 $routes->get('/alunos/(:num)', 'Aluno::getById/$1');

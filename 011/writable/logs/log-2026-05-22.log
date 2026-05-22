@@ -1,0 +1,50 @@
+CRITICAL - 2026-05-22 12:49:37 --> ErrorException: Undefined property: stdClass::$nome_alu
+[Method: POST, Route: alunos]
+in APPPATH\Controllers\Aluno.php on line 12.
+ 1 APPPATH\Controllers\Aluno.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nome_alu', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\011\\app\\Controllers\\Aluno.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Aluno->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aluno))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-22 12:55:32 --> ErrorException: Attempt to read property "id" on string
+[Method: PUT, Route: alunos]
+in APPPATH\Controllers\Aluno.php on line 34.
+ 1 APPPATH\Controllers\Aluno.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on string', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\011\\app\\Controllers\\Aluno.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Aluno->update()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aluno))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-22 12:58:01 --> Error: Call to undefined method stdClass::delete()
+[Method: DELETE, Route: alunos/2]
+in APPPATH\Services\AlunoService.php on line 66.
+ 1 APPPATH\Controllers\Aluno.php(40): App\Services\AlunoService->delete('2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Aluno->delete('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aluno))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-22 12:59:35 --> Error: Call to undefined method stdClass::delete()
+[Method: DELETE, Route: alunos/2]
+in APPPATH\Services\AlunoService.php on line 66.
+ 1 APPPATH\Controllers\Aluno.php(40): App\Services\AlunoService->delete('2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Aluno->delete('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aluno))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-22 13:00:42 --> Error: Call to undefined method stdClass::delete()
+[Method: DELETE, Route: alunos/2]
+in APPPATH\Services\AlunoService.php on line 67.
+ 1 APPPATH\Controllers\Aluno.php(40): App\Services\AlunoService->delete('2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Aluno->delete('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aluno))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -63,7 +63,7 @@ class AlunoService
     {
         $aluno = $this->alunoModel->find($id);
         if (!$aluno) return ["erro" => "Aluno não encontrado."];
-        $aluno->delete();
+        $this->alunoModel->delete($id);
         return ["sucesso" => true];
     }
 

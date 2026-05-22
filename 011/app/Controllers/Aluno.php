@@ -35,7 +35,8 @@ class Aluno extends BaseController
         return $this->response->setJSON($res);
     }
 
-    public function delete($id = null) {
+    public function delete($id = null)
+    {
         $alunoService = service("alunos");
         $res = $alunoService->delete($id);
         return $this->response->setJSON($res);
@@ -47,4 +48,5 @@ class Aluno extends BaseController
         $res = $alunoService->getMaxId();
         return $this->response->setJSON($res);
     }
+    
 }

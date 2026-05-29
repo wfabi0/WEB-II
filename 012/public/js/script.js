@@ -1,10 +1,28 @@
-/**
- * 
- * Ao carregar a página, o JavaScript faz uma requisição AJAX para o endpoint /estados, que retorna a lista de estados em formato JSON. O JavaScript então popula o dropdown de estados com os dados recebidos.
- */
+document.addEventListener("DOMContentLoaded", function () {
+  alert(BASE_URL);
 
-document.addEventListener('DOMContentLoaded', function() {
+  const estadoSelect = document.getElementById("estado");
+  const municipioSelect = document.getElementById("municipio");
 
-    alert('DOM carregado!');
+  estadoSelect.addEventListener("change", async (e) => {
+    const estadoId = e.target.value;
 
+    if (!estadoId) return;
+
+    municipioSelect.innerHTML = '<option value="">Carregando...</option>';
+
+    const res = await fetch(BASE_URL + `estados/${estadoId}/municipios`);
+    const data = await res.json();
+
+    municipioSelect.innerHTML =
+      '<option value="">Selecione o município</option>';
+
+    data.forEach((municipio) => {
+      console.log(municipio);
+      const option = document.createElement("option");
+      option.value = municipio.id;
+      option.textContent = municipio.nome;
+      municipioSelect.appendChild(option);
+    });
+  });
 });

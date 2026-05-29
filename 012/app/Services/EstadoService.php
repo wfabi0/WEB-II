@@ -6,6 +6,7 @@ use App\Models\EstadoModel;
 
 class EstadoService
 {
+
     protected $estadoModel;
 
     public function __construct()
@@ -15,10 +16,18 @@ class EstadoService
 
     public function getEstados()
     {
-        /*
-            Retorna a lista de estados.
-        */
+        try {
+            $estados = $this->estadoModel->findAll();
+        } catch (\Exception $e) {
+            return [
+                'status' => 'error',
+                'message' => 'Erro de Banco de Dados: ' . $e->getMessage()
+            ];
+        }
 
+        return [
+            'status' => 'success',
+            'data' => $estados
+        ];
     }
-
 }

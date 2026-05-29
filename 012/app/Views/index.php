@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
+
 <body>
 
     <div class="container">
@@ -20,10 +22,11 @@
                 <select name="estado" id="estado">
                     <option value="">Selecione um estado</option>
 
-                    <!-- Estados serão carregados do banco de dados-->
-                    <option value="1">Minas Gerais</option>
-                    <option value="2">São Paulo</option>
-                    <option value="3">Rio de Janeiro</option>
+                    <?php foreach ($estados as $estado):  ?>
+                        <option value="<?= $estado['id'] ?>">
+                            <?= $estado['nome'] ?>
+                        </option>
+                    <?php endforeach; ?>
 
                 </select>
             </div>
@@ -51,6 +54,7 @@
     </div>
 
 </body>
+
 </html>
 
 <script src="<?= base_url('js/script.js') ?>" defer></script>

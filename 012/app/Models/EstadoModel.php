@@ -14,7 +14,7 @@ class EstadoModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id', 'nome', 'sigla'];
+    protected $allowedFields = ['nome', 'sigla'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

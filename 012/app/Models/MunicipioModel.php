@@ -14,7 +14,7 @@ class MunicipioModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id', 'ufid', 'nome'];
+    protected $allowedFields = ['ufid', 'nome'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

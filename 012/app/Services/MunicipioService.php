@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use App\Models\MunicipioModel;
@@ -14,9 +15,21 @@ class MunicipioService
 
     public function getMunicipiosByEstado($estadoId)
     {
-        /*
-            Retorna a lista de municípios de um estado específico.
-        */
+        try {
+            $municipios = $this->municipioModel
+                ->select('id, nome')
+                ->where('ufid', $estadoId)
+                ->findAll();
+        } catch (\Exception $e) {
+            return [
+                'status' => 'error',
+                'message' => "Erro no Banco de Dados: " . $e->getMessage()
+            ];
+        }
 
+        return [
+            'status' => 'success',
+            'data' => $municipios
+        ];
     }
 }

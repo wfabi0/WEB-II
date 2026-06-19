@@ -6,6 +6,7 @@ class Home extends BaseController
 {
     public function index(): string
     {
+        session();
         return view('index');
     }
 
@@ -19,9 +20,13 @@ class Home extends BaseController
         $r = $cepService->consultaCep($cep);
 
         if ($r['status'] == 'success') {
-            d($r['data']);
+            return redirect()
+                ->back()
+                ->with('cepData', $r['data']);
         } else {
-            echo $r['msg'];
+           return redirect()
+                ->back()
+                ->with('error', 'Erro ao consultar o CEP. ' . $r['msg']);
         }
     }
 }

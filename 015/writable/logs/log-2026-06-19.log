@@ -1,0 +1,127 @@
+DEBUG - 2026-06-19 12:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-19 12:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:48:42 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:48:54 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:49:51 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:49:52 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:49:53 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:49:53 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:49:54 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-06-19 12:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-19 12:51:48 --> ErrorException: Undefined variable $session
+[Method: GET, Route: /]
+in APPPATH\Views\index.php on line 47.
+ 1 APPPATH\Views\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\Usuários\\0077110\\Documents\\dev\\WEB-II\\015\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

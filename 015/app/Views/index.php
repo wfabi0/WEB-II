@@ -44,6 +44,19 @@
         </div>
     </div>
 
+    <?php if ($session()->has('cepData')): ?>
+        <div class="container mt-3">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>CEP encontrado!</strong><br>
+                CEP: <?= esc($cepData['cep']) ?><br>
+                Logradouro: <?= esc($cepData['street']) ?><br>
+                Bairro: <?= esc($cepData['neighborhood']) ?><br>
+                Cidade: <?= esc($cepData['city']) ?><br>
+                Estado: <?= esc($cepData['state']) ?>     
+            </div>
+        </div>
+    <?php endif; ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
